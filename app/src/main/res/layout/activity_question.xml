@@ -10,6 +10,7 @@
     tools:context=".QuestionActivity">
 
     <TextView
+        android:id="@+id/question_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="ENTER YOUR QUESTION"
@@ -26,6 +27,7 @@
         android:layout_marginTop="20dp">
         
         <ProgressBar
+            android:id="@+id/progress_bar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -35,6 +37,7 @@
             style="?android:progressBarStyleHorizontal"/>
         
         <TextView
+            android:id="@+id/prgress_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1/5"
@@ -46,7 +49,7 @@
         android:id="@+id/opt_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="option1"
+        android:text="@string/option1"
         android:background="@drawable/question_option"
         android:padding="10dp"
         android:textSize="18sp"
@@ -57,7 +60,7 @@
         android:id="@+id/opt_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="option1"
+        android:text="@string/option2"
         android:background="@drawable/question_option"
         android:padding="10dp"
         android:textSize="18sp"
@@ -68,7 +71,7 @@
         android:id="@+id/opt_3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="option1"
+        android:text="@string/option3"
         android:background="@drawable/question_option"
         android:padding="10dp"
         android:textSize="18sp"
@@ -79,7 +82,7 @@
         android:id="@+id/opt_4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="option1"
+        android:text="@string/option4"
         android:background="@drawable/question_option"
         android:padding="10dp"
         android:textSize="18sp"
@@ -87,6 +90,7 @@
         android:gravity="center"/>
 
     <Button
+        android:id="@+id/btnSubmit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"

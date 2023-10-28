@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MAD_Assignment2_21012011002</string>
+    <string name="option1">option1</string>
+    <string name="option2">option2</string>
+    <string name="option3">option3</string>
+    <string name="option4">option4</string>
 </resources>
