@@ -13,6 +13,9 @@
         android:theme="@style/Theme.MAD_Assignment2_21012011002"
         tools:targetApi="33">
         <activity
+            android:name=".SplashActivity"
+            android:exported="false" />
+        <activity
             android:name=".QuestionActivity"
             android:exported="false" />
         <activity
