@@ -13,15 +13,17 @@
         android:theme="@style/Theme.MAD_Assignment2_21012011002"
         tools:targetApi="33">
         <activity
+            android:name=".ResultActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MyApp"/>
+        <activity
             android:name=".SplashActivity"
-            android:exported="true" >
-
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".QuestionActivity"
@@ -31,9 +33,7 @@
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MyApp"
-            android:windowSoftInputMode="adjustResize">
-
-        </activity>
+            android:windowSoftInputMode="adjustResize"></activity>
     </application>
 
 </manifest>

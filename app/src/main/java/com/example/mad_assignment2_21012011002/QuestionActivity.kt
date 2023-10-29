@@ -1,20 +1,26 @@
 package com.example.mad_assignment2_21012011002
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
+import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import java.util.jar.Attributes.Name
 
 class QuestionActivity : AppCompatActivity() {
 
     private var questionList :ArrayList<QuestionData>?=null
     private var currentPosition :Int=1
     private var selectedOption : Int=0
+    private var Name:String?=null
+    private var score:Int=0
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,19 +57,46 @@ class QuestionActivity : AppCompatActivity() {
                 if(selectedOption!=question.correct_ans)
                 {
                     setColor(selectedOption,R.drawable.wrong_question_option)
-
+                }
+                setColor(question.correct_ans,R.drawable.correct_question_option)
+                if (currentPosition==questionList!!.size)
+                submit.text="FINISH"
+                else
+                    submit.text="GO TO NEXT"
+            }else{
+                currentPosition++
+                when{
+                    currentPosition<=questionList!!.size->{
+                        setQuestion()
+                    }
+                    else->{
+                        var intent=Intent(this,ResultActivity::class.java)
+                        startActivity(intent)
+                    }
                 }
             }
+            selectedOption=0
         }
-
-
     }
+    val opt1 = findViewById<TextView>(R.id.opt_1)
+    val opt2 = findViewById<TextView>(R.id.opt_2)
+    val opt3 = findViewById<TextView>(R.id.opt_3)
+    val opt4 = findViewById<TextView>(R.id.opt_4)
 
     fun setColor(opt:Int,color:Int)
     {
         when(opt){
             1->{
-
+                opt1.background=ContextCompat.getDrawable(this,color)
+            }
+            2->{
+                opt2.background=ContextCompat.getDrawable(this,color)
+            }
+            3->{
+                opt3.background=ContextCompat.getDrawable(this,color)
+            }
+            4->{
+                opt4.background=ContextCompat.getDrawable(this,color)
             }
         }
     }
