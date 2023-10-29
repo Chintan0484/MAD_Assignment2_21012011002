@@ -9,5 +9,12 @@
     <color name="white">#FFFFFFFF</color>
     <color name="lightgreen">#43cea2</color>
     <color name="darkblue">#185a9d</color>
+    <color name="ocengreen">#44A08D</color>
+    <color name="fencegreen">#093637</color>
+    <color name="coolgreen">#67B26F</color>
+    <color name="coolblue">#4ca2cd</color>
+
+
+
 
 </resources>

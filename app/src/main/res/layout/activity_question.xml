@@ -7,6 +7,7 @@
     android:orientation="vertical"
     android:padding="10dp"
     android:gravity="center"
+    android:background="@drawable/gradient_question"
     tools:context=".QuestionActivity">
 
     <TextView
