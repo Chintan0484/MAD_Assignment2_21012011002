@@ -20,7 +20,7 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        val img : ImageView = findViewById(imageView)
+        val img : ImageView = findViewById(R.id.imageView)
 
         img.setBackgroundResource(R.drawable.splash_animation)
 
@@ -31,7 +31,7 @@ class SplashActivity : AppCompatActivity() {
         Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
-        },1400)
+        },3000)
 
     }
 }
