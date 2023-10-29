@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.graphics.Color
 import android.graphics.Typeface
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -42,7 +43,29 @@ class QuestionActivity : AppCompatActivity() {
             selectedOptionStyle(opt4,4)
         }
 
+        val submit =findViewById<Button>(R.id.btnSubmit)
+        submit.setOnClickListener{
+            if (selectedOption!=0)
+            {
+                val question=questionList!![currentPosition-1]
+                if(selectedOption!=question.correct_ans)
+                {
+                    setColor(selectedOption,R.drawable.wrong_question_option)
 
+                }
+            }
+        }
+
+
+    }
+
+    fun setColor(opt:Int,color:Int)
+    {
+        when(opt){
+            1->{
+
+            }
+        }
     }
 
     @SuppressLint("SetTextI18n")
