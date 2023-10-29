@@ -13,8 +13,8 @@
         android:theme="@style/Theme.MAD_Assignment2_21012011002"
         tools:targetApi="33">
         <activity
-            android:name=".ResultActivity"
-            android:exported="false"
+            android:name=".Result"
+            android:exported="true"
             android:theme="@style/Theme.MyApp"/>
         <activity
             android:name=".SplashActivity"
